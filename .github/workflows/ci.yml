@@ -35,8 +35,8 @@ jobs:
 
     - name: install go-migrate 
       run: |
-        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.16.2/migrate.linux-amd64.tar.gz --output ./migrate.deb
-        sudo dpkg -i migrate.deb
+        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.16.2/migrate.linux-amd64.deb --output ./migrate.deb
+        sudo dpkg -i migrate.deb 
         which migrate
     - name: run migrations
       run: make migrateup
